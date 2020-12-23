@@ -13,7 +13,7 @@ print('Первый вариант решения')
 day_cnt = 1
 a_tmp = a
 while a_tmp < b:
-    a_tmp = a_tmp + a_tmp * 0.1
+    a_tmp *= 1.1
     day_cnt += 1
     print(f'{day_cnt}-й день = {a_tmp:.3f} км') # Вывод километража по дням для проверки
 

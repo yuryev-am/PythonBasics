@@ -10,11 +10,12 @@ print(f'Издержки: {costs}')
 
 if gain > costs:
     print('Поздравляю, ваша Фирма работает в прибыль!')
-    print(f'Рентабельность Фирмы: {gain/costs:.2f}')
+    print(f'Рентабельность Фирмы: {(gain - costs) / gain:.2f}')
 elif gain < costs:
     print('К сожалению, ваша Фирма работает в убыток.')
 else:
     print('Ваша Фирма вышла в ноль! Это не плохо, но надо стараться лучше!')
 
-workers_cnt = int(input('Введите численность вашей Фирмы: '))
-print(f'Прибыль Фирмы на одного сотрудника составляет: {(gain-costs)/workers_cnt}')
+if gain > costs:
+    workers_cnt = int(input('Введите численность вашей Фирмы: '))
+    print(f'Прибыль Фирмы на одного сотрудника составляет: {(gain - costs) / workers_cnt}')

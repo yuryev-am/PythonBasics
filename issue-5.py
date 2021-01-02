@@ -14,6 +14,8 @@ def f_my_sum(val_lst):
     """
     s = 0
     for el in val_lst:
+        if el == 'q':
+            break
         try:
             s += float(el)
         except ValueError:

@@ -9,9 +9,9 @@ def my_divide(arg_1, arg_2):
     :return: частное
     """
     if arg_2 == 0:
-        return 'Ошибка! Делитель не может быть равен 0.'
-    else:
-        return arg_1 / arg_2
+        return
+
+    return arg_1 / arg_2
 
 
 a, b = input('Введите 2 числа через пробел: ').split()

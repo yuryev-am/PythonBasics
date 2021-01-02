@@ -7,7 +7,7 @@
 # например название, а значение — список значений-характеристик, например список названий товаров.
 
 # Создаем пустой список товаров
-products = list()
+products = []
 # Запращиваем у пользователя товары и их характеристики
 cnt = 1
 print('Добро пожаловать в базу данных нашего магазина! Пожалуйста, заполните товары.\n')
@@ -40,13 +40,13 @@ for el in products:
 # Немного аналитки
 print('\nНемного аналитики:')
 # Делаем словарь с именами параметров товаров и пустыми списками значений
-products_props = {'Название': [], 'Цена': [], 'Количество': [], 'Ед': []}
+products_props = {'Название': set(), 'Цена': set(), 'Количество': set(), 'Ед': set()}
 # Заполняем словарь products_props
 for prod in products:
-    products_props['Название'].append(prod[1]['Название'])
-    products_props['Цена'].append(prod[1]['Цена'])
-    products_props['Количество'].append(prod[1]['Количество'])
-    products_props['Ед'].append(prod[1]['Ед'])
+    products_props['Название'].add(prod[1]['Название'])
+    products_props['Цена'].add(prod[1]['Цена'])
+    products_props['Количество'].add(prod[1]['Количество'])
+    products_props['Ед'].add(prod[1]['Ед'])
 
 for el in products_props.items():
     print(el)
